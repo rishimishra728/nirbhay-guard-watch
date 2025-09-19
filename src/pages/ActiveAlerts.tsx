@@ -9,7 +9,7 @@ const ActiveAlerts = () => {
     {
       id: "ALT001",
       type: "Panic Button",
-      tourist: "John Doe",
+      tourist: "Arjun Sharma",
       location: "Red Fort, Delhi",
       coordinates: "28.6562° N, 77.2410° E",
       time: "2 minutes ago",
@@ -20,7 +20,7 @@ const ActiveAlerts = () => {
     {
       id: "ALT002",
       type: "Geo-fence Violation",
-      tourist: "Sarah Smith",
+      tourist: "Priya Patel",
       location: "Gateway of India, Mumbai",
       coordinates: "18.9220° N, 72.8347° E",
       time: "15 minutes ago",
@@ -31,7 +31,7 @@ const ActiveAlerts = () => {
     {
       id: "ALT003",
       type: "Inactivity Alert",
-      tourist: "Mike Johnson",
+      tourist: "Rajesh Gupta",
       location: "Jaipur City Palace",
       coordinates: "26.9255° N, 75.8237° E",
       time: "1 hour ago",

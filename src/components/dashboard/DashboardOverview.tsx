@@ -1,8 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AlertTriangle, Users, MapPin, Shield } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageProvider";
 
 export const DashboardOverview = () => {
+  const { t } = useLanguage();
+  
   const stats = [
     {
       title: "Active Tourists",
@@ -37,7 +40,7 @@ export const DashboardOverview = () => {
   const recentAlerts = [
     {
       id: "ALT001",
-      tourist: "John Doe",
+      tourist: "Arjun Sharma",
       location: "Red Fort, Delhi",
       type: "Panic Button",
       time: "2 minutes ago",
@@ -45,7 +48,7 @@ export const DashboardOverview = () => {
     },
     {
       id: "ALT002",
-      tourist: "Sarah Smith",
+      tourist: "Priya Patel",
       location: "Gateway of India, Mumbai",
       type: "Geo-fence Violation",
       time: "15 minutes ago",
@@ -53,7 +56,7 @@ export const DashboardOverview = () => {
     },
     {
       id: "ALT003",
-      tourist: "Mike Johnson",
+      tourist: "Rajesh Gupta",
       location: "Jaipur City Palace",
       type: "Inactivity Alert",
       time: "1 hour ago",
@@ -64,9 +67,9 @@ export const DashboardOverview = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-3xl font-bold text-foreground">Dashboard Overview</h2>
+        <h2 className="text-3xl font-bold text-foreground">{t("dashboard.overview")}</h2>
         <p className="text-muted-foreground mt-2">
-          Real-time monitoring and management of tourist safety across regions
+          {t("dashboard.monitoring")}
         </p>
       </div>
 

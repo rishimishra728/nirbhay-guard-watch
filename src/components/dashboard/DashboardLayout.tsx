@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Shield, BarChart3, Users, AlertTriangle, Map, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { useLanguage } from "@/contexts/LanguageProvider";
 
 interface DashboardLayoutProps {
   children: ReactNode;
@@ -9,20 +11,21 @@ interface DashboardLayoutProps {
 
 export const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   const location = useLocation();
+  const { t } = useLanguage();
 
   const navigationItems = [
-    { href: "/", icon: BarChart3, label: "Overview" },
-    { href: "/tourists", icon: Users, label: "Tourist Management" },
-    { href: "/alerts", icon: AlertTriangle, label: "Active Alerts" },
-    { href: "/map", icon: Map, label: "Tourist Heat Map" },
-    { href: "/settings", icon: Settings, label: "Settings" },
+    { href: "/", icon: BarChart3, label: t("nav.overview") },
+    { href: "/tourists", icon: Users, label: t("nav.tourists") },
+    { href: "/alerts", icon: AlertTriangle, label: t("nav.alerts") },
+    { href: "/map", icon: Map, label: t("nav.map") },
+    { href: "/settings", icon: Settings, label: t("nav.settings") },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Top Header */}
       <header className="border-b bg-card">
-        <div className="flex h-16 items-center px-6">
+        <div className="flex h-16 items-center justify-between px-6">
           <div className="flex items-center space-x-3">
             <Shield className="h-8 w-8 text-primary" />
             <div>
@@ -30,6 +33,7 @@ export const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               <p className="text-sm text-muted-foreground">Authority Dashboard</p>
             </div>
           </div>
+          <ThemeToggle />
         </div>
       </header>
 

@@ -9,7 +9,7 @@ const TouristManagement = () => {
   const tourists = [
     {
       id: "T001",
-      name: "John Doe",
+      name: "Arjun Sharma",
       nationality: "USA",
       location: "Red Fort, Delhi",
       safetyScore: 85,
@@ -18,7 +18,7 @@ const TouristManagement = () => {
     },
     {
       id: "T002",
-      name: "Sarah Smith",
+      name: "Priya Patel",
       nationality: "UK",
       location: "Gateway of India, Mumbai",
       safetyScore: 92,
@@ -27,7 +27,7 @@ const TouristManagement = () => {
     },
     {
       id: "T003",
-      name: "Mike Johnson",
+      name: "Rajesh Gupta",
       nationality: "Canada",
       location: "Jaipur City Palace",
       safetyScore: 76,
